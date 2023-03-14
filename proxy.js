@@ -20,12 +20,12 @@ app.all('*', function (req, res, next) {
     }
 });
 
-var targetUrl = "https://ipl.parllay.cn/";
-// 拦截http://localhost:3000/admin/*  的请求，转到目标服务器:https://ipl.parllay.cn/api/*   
+var targetUrl = "xxx";
+// 拦截http://localhost:3000/admin/*  的请求，转到目标服务器:xxx*   
 app.use('/api/*', createProxyMiddleware({ target: targetUrl, changeOrigin: true, secure: false }));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index 2.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 //配置服务端口
